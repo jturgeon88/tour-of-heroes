@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { Observable, of } from 'rxjs';
 
 import { Hero } from './hero';
@@ -15,6 +16,7 @@ export class HeroService {
   // this function is simulating a fetch call to a server for heroes. Here we're
   //just returning the mock data of heroes
   getHeroes(): Observable<Hero[]> {
+    // TODO: send the message _after_ fetching the heroes
     this.messageService.add('HeroService: fetched heroes');
     return of(HEROES);
   }
